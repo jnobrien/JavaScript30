@@ -16,6 +16,7 @@
       </div>
     </div>
 
+    <audio data-key="second-hand-tick" src="sounds/tink.wav"></audio>
 
   <style>
     html {
@@ -105,7 +106,14 @@
       } 
     }
 
+    function playSound() {
+      const audio = document.querySelector(`audio[data-key="second-hand-tick"]`);
+      audio.play();
+    };
+
     setInterval(setDate, 1000);
+    setInterval(playSound, 1000);
+    playSound();
 
   </script>
 </body>
